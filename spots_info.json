@@ -1,0 +1,145 @@
+{
+  "Akihabara Station": {
+    "official_name": "JR Akihabara Station (Denki-gai / Electric Town exit)",
+    "hours": null,
+    "closed": "none listed",
+    "open_on_nov5_6_16to19": "unknown",
+    "what": "The JR station exit facing the electronics district is called the Electric Town exit (Denki-gai-guchi); the other side is the Showa-dori exit. Kanda Myojin is about 7 minutes on foot from this exit, Mandarake Complex about 4 minutes, and Taito Station and GiGO Akihabara 3 about 3 minutes (walking times as stated by each spot's own site).",
+    "tip": "Meet at the Electric Town exit, not the Showa-dori exit. No station hours were read, so the open flag is unknown (it is a public transit station, not a shop).",
+    "source": "https://akiba.or.jp/whats",
+    "checked": "2026-10-12",
+    "confidence": "medium"
+  },
+  "Kanda Myojin shrine": {
+    "official_name": "Kanda Myojin (Kanda Shrine), 2-16-2 Sotokanda",
+    "hours": "Amulet/talisman office 9:00-18:00 (notice of 2026-09-28, valid through Dec 31, 2026). Grounds hours: not stated",
+    "closed": "none listed",
+    "open_on_nov5_6_16to19": "unknown",
+    "what": "Shrine that calls itself the chief guardian shrine of Edo; enshrines Daikoku-sama (Onamuchi), Ebisu-sama (Sukunahikona) and Taira no Masakado. Traditionally founded in 730 and moved to its present site in 1616. Hosts Kanda Matsuri every two years.",
+    "tip": "The amulet office closes at 18:00, so buy omamori before then. The official site does not state when the grounds close and a live camera of the grounds runs 24 hours; formal prayer reception is listed only as 9:00-16:30 or 15:45 in January 2026 notices, so do not plan on a prayer ceremony at 16:00-19:00. Official site says 7 min on foot from the Electric Town exit.",
+    "source": "http://www.kandamyoujin.or.jp/infoblog/detail/?pid=116 ; https://www.kandamyoujin.or.jp/access/ ; https://www.kandamyoujin.or.jp/profile/ ; https://www.kandamyoujin.or.jp/event/detail/?id=2",
+    "checked": "2026-10-12",
+    "confidence": "medium"
+  },
+  "mAAch ecute Kanda Manseibashi": {
+    "official_name": "mAAch ecute Kanda Manseibashi (mAAch ecute 神田万世橋)",
+    "hours": "Stairs and platform areas 11:00-22:00 Mon-Sat (11:00-20:30 Sun/holidays); Open Deck 11:00-22:30 Mon-Sat. Shop hours vary by shop",
+    "closed": "Facility closure days in 2026: Nov 9 (Mon), Dec 31 (Thu); none on Nov 5 or 6",
+    "open_on_nov5_6_16to19": true,
+    "what": "Commercial facility built into the old Manseibashi railway viaduct (1912 Stairs, 1935 Stairs, Platform, Open Deck). The official shop list has 9 entries including a craft beer bar, an observation cafe/restaurant, a ramen shop, a gallery/diorama display, and accessories.",
+    "tip": "Nov 5 and 6 are normal opening days (the next closure is Mon Nov 9). Individual shops differ: for example Les Nereides PARIS (accessories) closes at 19:00 and the Library gallery at 20:00, while the cafe/bar listings run into the evening.",
+    "source": "https://www.ecute.jp/maach ; https://www.ecute.jp/maach/shop",
+    "checked": "2026-10-12",
+    "confidence": "high"
+  },
+  "Radio Kaikan": {
+    "official_name": "Akihabara Radio Kaikan (秋葉原ラジオ会館), 1-15-16 Sotokanda",
+    "hours": "Building 10:00-20:00 (B1F restaurant has its own later hours)",
+    "closed": "none listed (individual shops post temporary closures)",
+    "open_on_nov5_6_16to19": true,
+    "what": "Multi-floor hobby building, floors 0F-10F: 10F event space; 9F card shops; 8F and 7F doll, figure and trading card shops; 5F Lashinbang, Kaiyodo Hobby Lobby and others; 3F K-BOOKS; 2F and 1F hobby shops and a Family Mart; 0F a Ginza Lion restaurant.",
+    "tip": "Building closes at 20:00, so 16:00-19:00 is fine, but each shop sets its own hours. Official news page lists temporary closures of single shops (for example 5F Uchusen-sen, 1F Mach), so check the shop-news page before choosing a floor.",
+    "source": "https://akihabara-radiokaikan.co.jp/ ; https://akihabara-radiokaikan.co.jp/?page_id=3496",
+    "checked": "2026-10-12",
+    "confidence": "high"
+  },
+  "Akihabara Gachapon Kaikan": {
+    "official_name": "Gachapon Kaikan (ガチャポン会館), 3-15-5 Sotokanda MN Building 1F",
+    "hours": "11:00-20:00 weekdays; 11:00-19:00 Sundays and holidays",
+    "closed": "none listed",
+    "open_on_nov5_6_16to19": true,
+    "what": "Capsule-toy (gachapon) shop on the ground floor of the MN Building. The official site gives 2 minutes on foot from Suehirocho Station (Ginza Line) and 7 minutes from the JR Electric Town exit.",
+    "tip": "Nov 5 and 6 are weekdays, so it should be open until 20:00. The site says the latest hours are posted on the shop's X account. It is about a 7 minute walk from the station, further than the shops on the main strip.",
+    "source": "https://www.akibagacha.com/",
+    "checked": "2026-10-12",
+    "confidence": "high"
+  },
+  "Super Potato": {
+    "official_name": "Super Potato Akihabara (スーパーポテト 秋葉原店), 1-11-2 Sotokanda Kitabayashi Building 3F-5F",
+    "hours": "11:00-20:00 (weekdays, Saturdays, Sundays, holidays)",
+    "closed": "none (open year-round per store page)",
+    "open_on_nov5_6_16to19": true,
+    "what": "Retro game shop on floors 3F-5F of the Kitabayashi Building. The store page describes 5F as a retro game arcade and rest area; it does not describe 3F and 4F.",
+    "tip": "Store closes at 20:00, so the arcade on 5F is reachable during the tour window. The Akihabara store page has no store-specific notices at the time of checking; the mail-order desk (11:00-17:00, closed Sat/Sun) is separate and not relevant.",
+    "source": "https://www.superpotato.com/shop/akihabara/",
+    "checked": "2026-10-12",
+    "confidence": "high"
+  },
+  "GiGO arcade": {
+    "official_name": "GiGO Akihabara 3 (GiGO秋葉原3号館), 1-11-11 Sotokanda, along Chuo-dori",
+    "hours": "10:00-23:30 every day including holidays (cafe last order 19:40)",
+    "closed": "none listed",
+    "open_on_nov5_6_16to19": true,
+    "what": "Main GiGO on Chuo-dori: the official page gives 'along Chuo-dori, 3 minutes from the Electric Town exit' and lists crane games, print-sticker booths, driving, gun, music, video and card games, and capsule toys. The collab cafe listing shows it on floors 6-7 of the Sotokanda 1-chome building.",
+    "tip": "Branches: GiGO Akihabara 1 closed on 2025-08-31 (its page no longer exists on the official site; closure was reported by the operator via news sites) and the operator said it continues with branches 2, 3 and 5. Branch 2: 1-15-1 (2F), Branch 5: 1-10-1 (1F). Use branch 3 for Chuo-dori; branch 5 for the Gundam EXVS2 machines moved from branch 1 (per news reports).",
+    "source": "https://www.gigo.co.jp/shops/akihabara3 ; https://www.gigo.co.jp/shops/akihabara2 ; https://www.gigo.co.jp/shops/akihabara5 ; https://gamebiz.jp/news/409116 (closure of branch 1, news report)",
+    "checked": "2026-10-12",
+    "confidence": "high"
+  },
+  "Chuo-dori at night": {
+    "official_name": "Chuo-dori (中央通り), Akihabara Electric Town main street",
+    "hours": null,
+    "closed": "none listed",
+    "open_on_nov5_6_16to19": true,
+    "what": "The main street of the electric district. The pedestrian zone (car-free) runs every Sunday only: 13:00-17:00 from October to March, between the Sotokanda 5-chome intersection and Manseibashi intersection, about 570 m.",
+    "tip": "Nov 5 and 6 are a Thursday and a Friday, so there is no pedestrian zone and traffic is on the road. Walk on the sidewalks. Nov 1, 8 and later Sundays are the days with the car-free street (and a sidewalk rest-area trial on Sundays 13:00-16:30), not this tour.",
+    "source": "https://akiba.or.jp/pedestrianzone ; https://akiba.or.jp/3800",
+    "checked": "2026-10-12",
+    "confidence": "high"
+  },
+  "Animate Akihabara": {
+    "official_name": "Animate Akihabara (アニメイト秋葉原) - Building No.1, No.2 and ANNEX, 4-3-1 Sotokanda",
+    "hours": "No.1 and No.2 buildings 10:00-21:00 daily; ANNEX 10:00-21:00 weekdays, 10:00-20:00 weekends/holidays; Cafe Gratte+ ANNEX 12:00-20:00 weekdays (last order 19:30)",
+    "closed": "none listed",
+    "open_on_nov5_6_16to19": true,
+    "what": "Large anime goods store. After the renewal opened on 2026-08-08: No.1 building floors 1F-6F character goods; ANNEX B1-1F is a capsule-toy floor 'POP @P CAPSULE -AKIHABARA-', 2F-3F game titles and character goods, 4F-7F official shops and events.",
+    "tip": "Store was expanded and reopened on 2026-08-08, and now has a No.1 building, a No.2 building and an ANNEX; older blog posts may describe a different layout. Cafe Gratte on Thursday/Friday takes last order at 19:30.",
+    "source": "https://www.animate.co.jp/shop/akihabara/",
+    "checked": "2026-10-12",
+    "confidence": "high"
+  },
+  "Mandarake Complex": {
+    "official_name": "Mandarake Complex (まんだらけ コンプレックス), 3-11-12 Sotokanda; Complex 2 at 3-12-2 Sotokanda",
+    "hours": "12:00-20:00 (buyback accepted until 19:30)",
+    "closed": "open every day of the year",
+    "open_on_nov5_6_16to19": true,
+    "what": "Eight-floor Mandarake building. Floor guide on the shop page: 1F buyback, vintage Japanese pop items and cosplay; 2F Disney; 3F boys' comics and vintage; 4F men's doujin; 5F BL/girls' comics, idols, women's doujin, magical girl and dolls; 6F-8F toys, plastic models and figures.",
+    "tip": "Complex 2 (3-12-2, same 12:00-20:00 hours, card/game/CD/DVD floors) is a separate building next to it and, per the shop's own topics, had its 1st anniversary in September 2026. Opens at noon, so it is fully open at 16:00. Some floors sell adult material; check the floor guide before going up with a mixed group.",
+    "source": "https://www.mandarake.co.jp/dir/cmp/ ; https://www.mandarake.co.jp/dir/cmp2/",
+    "checked": "2026-10-12",
+    "confidence": "high"
+  },
+  "Lashinbang or Surugaya": {
+    "official_name": "Lashinbang AKIBA Flags (1-7-6 Sotokanda, AKIBA Culture ZONE 2F) and Surugaya Akihabara Honkan (駿河屋 秋葉原本館, 3-11-3 Sotokanda)",
+    "hours": "Lashinbang AKIBA Flags 11:00-21:00 daily (buyback 11:00-18:00); Lashinbang Radio Kaikan branch (5F) 10:00-20:00 (buyback 11:45-18:00); Surugaya Akihabara Honkan weekdays 11:00-21:00, weekends/holidays 10:00-21:00",
+    "closed": "Lashinbang: none (Radio Kaikan branch follows the building's days off); Surugaya: none listed",
+    "open_on_nov5_6_16to19": true,
+    "what": "Lashinbang AKIBA Flags sells character goods, scale figures, ichiban kuji, prize figures, plush and retro games. Surugaya Akihabara Honkan is an 8-floor building on 'Junk-dori' selling figures, toys, anime goods, trading cards and PC/doujin software; floors 5F and 6F are adult-only; 8F is an event space.",
+    "tip": "The official Lashinbang store list has no store named 'Akihabara main': it lists AKIBA Flags, the Radio Kaikan 5F branch and the adult 'AKIBA DEEP BASE' (4-4-3, 3F). Lashinbang AKIBA Flags is the one that matches 'main' as a general store, but this mapping is my reading, not stated by the site. Surugaya Akihabara Ekimae (1-15-15, B1-3F, 1 min from the station) has the same hours and is the closer option.",
+    "source": "https://api.lashinbang.com/api/get_store (feeds https://www.lashinbang.com/store/ pages) ; https://www.suruga-ya.jp/feature/realstore/akihabara_main/index.html ; https://www.suruga-ya.jp/feature/akihabara_ekimae/index.html",
+    "checked": "2026-10-12",
+    "confidence": "medium"
+  },
+  "Akihabara Radio Center": {
+    "official_name": "Akihabara Radio Center (秋葉原ラジオセンター), 1-14-2 Sotokanda area, under the elevated tracks near the Electric Town exit",
+    "hours": null,
+    "closed": "none listed",
+    "open_on_nov5_6_16to19": "unknown",
+    "what": "Cluster of small parts and electronics shops in the arches under the tracks; the Akihabara Electric Town Promotion Association's site lists 'Radio Center' among shops taking part in the Oct 2026 Omotenashi fair. No official site with shared hours was found.",
+    "tip": "Each tenant sets its own hours. A non-official Akihabara guide blog (akihabara-bc.jp, not read directly because the page blocked access) gave roughly 10:00-19:00 for the center, so parts stalls may be closing around 19:00, but this is unconfirmed. Treat it as a short walk-through at the start of the window, not a 18:30 stop.",
+    "source": "https://akiba.or.jp/3833 (association page; lists Radio Center as a participating shop, no hours)",
+    "checked": "2026-10-12",
+    "confidence": "low"
+  },
+  "Taito Station and GiGO": {
+    "official_name": "Taito Station Akihabara (タイトーステーション 秋葉原店), 4-2-2 Sotokanda Kisan Building; also Taito Station Akihabara East-West Free Passage (秋葉原東西自由通路店)",
+    "hours": "10:00-23:30, open year-round",
+    "closed": "none (open year-round)",
+    "open_on_nov5_6_16to19": true,
+    "what": "Taito Station Akihabara has a large Space Invaders sign; official floor guide: B1 print-sticker machines; 1F-3F crane games; 4F arcade, card, video and racing games and Taiko no Tatsujin; 5F music games. The East-West Free Passage store (Kanda Sakumacho 1-6-1, inside the station passage) is also 10:00-23:30, open every day.",
+    "tip": "Taito Station Akihabara is 3 min on foot from the Electric Town exit per the official page. The East-West Free Passage store is 0 minutes from the Electric Town exit and Central ticket gate, handy for a first stop. A separate Taito 'Hey' game center (store id 00001703) also exists in Akihabara; do not confuse it with Taito Station. For GiGO see the 'GiGO arcade' entry.",
+    "source": "https://www.taito.co.jp/store/00001802 ; https://www.taito.co.jp/store/topics/00001802/3861/4 ; https://www.taito.co.jp/store/00002208",
+    "checked": "2026-10-12",
+    "confidence": "high"
+  }
+}
