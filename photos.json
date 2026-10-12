@@ -1,0 +1,39 @@
+{
+ "A": {
+  "card": {
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Akihabara_%2853152331538%29.jpg/960px-Akihabara_%2853152331538%29.jpg",
+   "title": "Akihabara (53152331538).jpg",
+   "lic": "CC BY 2.0",
+   "score": 8,
+   "note": "昼の中央通り・人通りとアニメ看板"
+  },
+  "detail": [
+   {
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Magnolias_bloom_in_a_shrine_in_Tokyo_%2853621075243%29.jpg/960px-Magnolias_bloom_in_a_shrine_in_Tokyo_%2853621075243%29.jpg",
+    "title": "Magnolias bloom in a shrine in Tokyo (53621075243).jpg",
+    "lic": "CC BY 2.0",
+    "score": 7,
+    "note": "神田明神の朱と桜"
+   }
+  ],
+  "food": []
+ },
+ "B": {
+  "card": {
+   "thumb": "img/goods.jpg",
+   "title": "Walls of anime acrylic stands and keychains in an Akihabara shop",
+   "lic": "own photo"
+  },
+  "detail": [],
+  "food": []
+ },
+ "C": {
+  "card": {
+   "thumb": "img/arcade.jpg",
+   "title": "A guest playing Taiko no Tatsujin in an Akihabara arcade",
+   "lic": "own photo"
+  },
+  "detail": [],
+  "food": []
+ }
+}

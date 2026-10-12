@@ -1,0 +1,194 @@
+[
+ {
+  "id": "A",
+  "name": "First time in Akihabara",
+  "tag": "A little of everything",
+  "chips": [
+   "3 hours",
+   "On foot",
+   "Sunset to neon"
+  ],
+  "why": "If you are not sure what you like yet, this is the safe and fun one. A shrine at sunset, the famous figure building, hundreds of capsule toys, retro games, an arcade, and the main street lit up at night.",
+  "steps": [
+   [
+    "16:00",
+    "Meet at Akihabara Station",
+    "Electric Town exit. A two-minute map of the district."
+   ],
+   [
+    "16:10",
+    "Kanda Myojin shrine",
+    "Anime-themed ema plaques and the shrine from Love Live!, in the last daylight."
+   ],
+   [
+    "16:35",
+    "mAAch ecute Kanda Manseibashi",
+    "Old red-brick railway arches at sunset. The best photo spot of the day."
+   ],
+   [
+    "17:00",
+    "Radio Kaikan",
+    "Floor after floor of figures and goods. See what is popular this month."
+   ],
+   [
+    "17:40",
+    "Akihabara Gachapon Kaikan",
+    "Hundreds of capsule toy machines. Pick a souvenir by luck."
+   ],
+   [
+    "18:05",
+    "Super Potato",
+    "Retro games from the 80s and 90s, three floors of them."
+   ],
+   [
+    "18:30",
+    "GiGO arcade",
+    "Try the crane games."
+   ],
+   [
+    "18:50",
+    "Chuo-dori at night",
+    "One last photo under the neon, then goodbye."
+   ]
+  ],
+  "stops": [
+   "Akihabara Station",
+   "Kanda Myojin Shrine",
+   "mAAch ecute Kanda Manseibashi",
+   "Akihabara Radio Kaikan",
+   "Akihabara Gachapon Kaikan",
+   "Super Potato Akihabara",
+   "GiGO Akihabara"
+  ],
+  "moves": "All on foot, about 2.5 km. Short and flat, with breaks inside the shops.",
+  "food": [],
+  "good": "First-timers, mixed groups, anyone who wants to see the whole district in one evening.",
+  "mind": "The sun sets around 16:40 in early November, so we do the outdoor photos first and the neon at the end. Closing times will be re-checked once the date is fixed.",
+  "links": [
+   [
+    "Kanda Myojin",
+    "https://www.kandamyoujin.or.jp/"
+   ],
+   [
+    "Radio Kaikan",
+    "https://www.akihabara-radiokaikan.co.jp/"
+   ]
+  ]
+ },
+ {
+  "id": "B",
+  "name": "Find your favorite",
+  "tag": "Built around the series you love",
+  "chips": [
+   "3 hours",
+   "Shopping",
+   "Made for you"
+  ],
+  "why": "Tell me the anime or games you love, and we go straight to the shops that have them. New goods first, then the used and rare shops where fans find things they cannot get at home.",
+  "steps": [
+   [
+    "16:00",
+    "Meet at Akihabara Station",
+    "Electric Town exit."
+   ],
+   [
+    "16:05",
+    "Animate Akihabara",
+    "New official goods for your series."
+   ],
+   [
+    "16:40",
+    "Mandarake Complex",
+    "Eight floors of used manga, figures and rare items. Real finds, honest prices."
+   ],
+   [
+    "17:30",
+    "Lashinbang or Surugaya",
+    "A second shop to dig through. I choose which one by your series."
+   ],
+   [
+    "18:10",
+    "Akihabara Gachapon Kaikan",
+    "Look for capsule toys of your favorite characters."
+   ],
+   [
+    "18:40",
+    "Chuo-dori at night",
+    "A photo with what you found, under the neon."
+   ]
+  ],
+  "stops": [
+   "Akihabara Station",
+   "Animate Akihabara",
+   "Mandarake Complex Akihabara",
+   "Lashinbang Akihabara",
+   "Akihabara Gachapon Kaikan"
+  ],
+  "moves": "All on foot, about 2 km. The shops are close together.",
+  "food": [],
+  "good": "Fans with a favorite series or character. Collectors.",
+  "mind": "Send me the names of the series you love before the day, and I will change the shops and floors to match. The sun sets around 16:40 in early November, so we do the outdoor photos first and the neon at the end. Closing times will be re-checked once the date is fixed.",
+  "links": [
+   [
+    "Mandarake",
+    "https://www.mandarake.co.jp/"
+   ]
+  ]
+ },
+ {
+  "id": "C",
+  "name": "Retro and games",
+  "tag": "The old electric town and the arcades",
+  "chips": [
+   "3 hours",
+   "Games",
+   "Retro"
+  ],
+  "why": "Akihabara before anime: tiny electronics stalls under the train tracks. Then retro consoles, rhythm games and fighting games, and the arcades at night.",
+  "steps": [
+   [
+    "16:00",
+    "Meet at Akihabara Station",
+    "Electric Town exit."
+   ],
+   [
+    "16:05",
+    "Akihabara Radio Center",
+    "Narrow alleys of electronic parts under the tracks, the way Akihabara started."
+   ],
+   [
+    "16:30",
+    "mAAch ecute Kanda Manseibashi",
+    "Red-brick railway arches at sunset."
+   ],
+   [
+    "17:00",
+    "Super Potato",
+    "Famicom and Super Famicom on the shelves, old arcade machines and Japanese snacks upstairs."
+   ],
+   [
+    "17:45",
+    "Taito Station and GiGO",
+    "Rhythm games, fighting games, crane games."
+   ],
+   [
+    "18:30",
+    "Akihabara Gachapon Kaikan",
+    "A last capsule toy, then a neon photo on Chuo-dori."
+   ]
+  ],
+  "stops": [
+   "Akihabara Station",
+   "Akihabara Radio Center",
+   "mAAch ecute Kanda Manseibashi",
+   "Super Potato Akihabara",
+   "Taito Station Akihabara",
+   "Akihabara Gachapon Kaikan"
+  ],
+  "moves": "All on foot, about 2 km.",
+  "food": [],
+  "good": "Gamers, retro fans, people who have seen Akihabara before.",
+  "mind": "The sun sets around 16:40 in early November, so we do the outdoor photos first and the neon at the end. Closing times will be re-checked once the date is fixed.",
+  "links": []
+ }
+]
