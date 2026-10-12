@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Akihabara Evening Tour</title>
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fdf7ee;--ink:#1d1a17;--red:#d7261e;--grey:#645d55;--line:#e4d9c6;--wash:#f6ecdb}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;color-scheme:light}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"Instrument Sans",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--red)}
+h1,h2,h3,p{margin:0}
+.nw{display:inline-block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:10;background:var(--cream);border-bottom:2px solid var(--ink)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px}
+.facts{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;display:flex;gap:6px 14px;flex-wrap:wrap;margin:0;padding:0;list-style:none}
+.facts{flex-direction:column;gap:0;line-height:1.35}
+@media(min-width:760px){.facts{flex-direction:row;gap:6px 14px}.facts li+li::before{content:"";display:inline-block;width:1px;height:.9em;background:var(--ink);margin-right:14px;vertical-align:-1px}}
+.facts .opt{display:none}
+.nav{display:flex;align-items:center;gap:16px;font-size:13px;font-weight:600}
+.nav a{color:var(--ink);text-decoration:none;display:none}
+.nav a:hover{color:var(--red)}
+.pdf{font:inherit;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--ink);color:var(--cream);border:0;padding:8px 12px;cursor:pointer;white-space:nowrap}
+.pdf:hover{background:var(--red)}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+@media(min-width:760px){.nav a{display:inline}.facts .opt{display:list-item}.wrap{padding:0 32px}}
+
+/* hero */
+.mark{padding-top:14px}
+.mark svg{display:block;width:100%;height:auto;fill:var(--ink)}
+.mark text{font-family:Anton,"Bebas Neue",Impact,"Arial Narrow",sans-serif}
+.kicker{padding:10px 0 18px;font-size:15px;font-weight:600;display:flex;gap:4px 20px;flex-wrap:wrap;justify-content:space-between}
+.kicker span{display:inline-block}
+.photo{position:relative;height:clamp(180px,34vw,420px);background:#ccc}
+.photo img{width:100%;height:100%;object-fit:cover}
+.redband{background:var(--red);color:var(--cream);padding:18px 0 20px;border-top:6px solid var(--ink)}
+.redband p{display:flex;flex-wrap:wrap;gap:2px 28px;font-family:Anton,Impact,"Arial Narrow",sans-serif;font-size:clamp(22px,4.4vw,44px);line-height:1.1;letter-spacing:.02em;text-transform:uppercase;text-wrap:balance}
+
+/* sections */
+section.wrap{padding-top:48px;padding-bottom:8px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:6px}
+h2{font-family:Anton,Impact,"Arial Narrow",sans-serif;font-weight:400;font-size:clamp(36px,7vw,64px);line-height:1;text-transform:uppercase;letter-spacing:.01em;margin-bottom:20px;text-wrap:balance}
+.lead{max-width:60ch;color:var(--grey);margin-bottom:22px}
+
+/* tabs */
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--ink);margin-bottom:28px}
+.tab{font:inherit;text-align:left;background:var(--cream);color:var(--ink);border:0;border-left:2px solid var(--ink);padding:10px 10px 12px;cursor:pointer;display:flex;flex-direction:column;gap:2px;min-width:0}
+.tab:first-child{border-left:0}
+.tab .l{font-family:Anton,Impact,sans-serif;font-size:34px;line-height:1;color:var(--red)}
+.tab .n{font-size:13px;font-weight:700;line-height:1.25}
+.tab .g{display:none;font-size:14px;color:var(--grey);line-height:1.3}
+.tab[aria-selected=true]{background:var(--ink);color:var(--cream)}
+.tab[aria-selected=true] .g{color:#d9cfbe}
+.tab:not([aria-selected=true]):hover{background:var(--wash)}
+.tab:focus-visible{outline-offset:-5px;outline-color:var(--red)}
+.tab[aria-selected=true]:focus-visible{outline-color:#fff}
+@media(min-width:760px){.tab{padding:16px 20px 18px}.tab .l{font-size:56px}.tab .n{font-size:20px}.tab .g{display:block}}
+
+/* panel */
+.panel[hidden]{display:none}
+.ph{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+h3{font-family:Anton,Impact,"Arial Narrow",sans-serif;font-weight:400;font-size:clamp(30px,5.6vw,52px);line-height:1.02;text-transform:uppercase;letter-spacing:.01em;text-wrap:balance}
+h3 .pl{display:block;color:var(--red);font-family:"Instrument Sans",sans-serif;font-weight:700;font-size:14px;letter-spacing:.14em;line-height:1.4;margin-bottom:4px}
+.tagline{font-weight:700;color:var(--red);margin-bottom:10px}
+.why{max-width:62ch;margin-bottom:14px}
+.route{display:flex;flex-wrap:wrap;gap:4px 0;margin:0 0 28px;padding:0;list-style:none;font-size:13px;font-weight:600;color:var(--grey)}
+.route li:not(:last-child)::after{content:"/";margin:0 8px;color:var(--red)}
+.pg{display:grid;gap:28px}
+@media(min-width:960px){.pg{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:56px;align-items:start}.side{position:sticky;top:68px}}
+.tl{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.tl li{display:grid;grid-template-columns:86px 1fr;gap:0 14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.tl .t{font-size:26px;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.tl .p{font-weight:700;font-size:18px;line-height:1.3}
+.tl .w{color:var(--grey);font-size:16px;margin-top:2px}
+.tl .sun{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:0;color:var(--red);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;grid-template-columns:none}
+.tl .sun::before,.tl .sun::after{content:"";flex:1;height:3px;background:var(--red)}
+.tl .sun span{white-space:nowrap}
+@media(min-width:760px){.tl li{grid-template-columns:130px 1fr;gap:0 24px;padding:18px 0}.tl .t{font-size:42px}.tl .p{font-size:21px}.tl .w{font-size:17px}}
+.side figure{margin:0 0 20px}
+.side img{width:100%;aspect-ratio:4/3;object-fit:cover;border:2px solid var(--ink)}
+.side figcaption{font-size:13px;color:var(--grey);margin-top:6px}
+.kv{border-top:2px solid var(--ink);padding:12px 0 14px}
+.kv + .kv{border-top:1px solid var(--line)}
+.kv b{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px}
+
+/* meet / choose */
+.card{border:2px solid var(--ink);padding:20px 16px;display:grid;gap:18px;align-items:start}
+@media(min-width:760px){.card{padding:32px;grid-template-columns:1.6fr 1fr;gap:40px}}
+.card .big{font-size:clamp(19px,2.4vw,24px);line-height:1.4;font-weight:500;max-width:34ch}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase;padding:14px 22px;border:2px solid var(--red)}
+.btn:hover{background:var(--ink);border-color:var(--ink)}
+.letters{display:flex;gap:10px;margin-top:6px}
+.letters span{font-family:Anton,Impact,sans-serif;font-size:36px;line-height:1;width:56px;height:56px;border:2px solid var(--ink);display:grid;place-items:center}
+.letters span:nth-child(1){background:var(--ink);color:var(--cream)}
+footer{margin-top:56px;background:var(--ink);color:#d9cfbe;padding:28px 0 36px;font-size:14px}
+footer p+p{margin-top:10px}
+footer a{color:#fff}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* print */
+@media print{
+ @page{size:A4;margin:11mm}
+ html,body{background:#fff;font-size:10.5pt;line-height:1.35}
+ .bar,.tabs,.nav,.pdf,.btn,.photo,.side figure,#meet .letters,.lead{display:none!important}
+ .wrap{max-width:none;padding:0}
+ .mark svg{width:38%}#plans>.eyebrow,#plansH{display:none}#meet h2,#choose h2{font-size:16pt;margin-bottom:4px}#meet,#choose{break-inside:avoid}
+ .mark{padding:0}.kicker{padding:4px 0 6px;font-size:10pt}
+ .redband{padding:6px 0;border-top-width:3px}.redband p{font-size:13pt}
+ section.wrap{padding-top:12px;padding-bottom:0}
+ h2{font-size:22pt;margin-bottom:8px}
+ .eyebrow{font-size:8pt;margin-bottom:2px}
+ .panel[hidden]{display:block!important}
+ .panel{margin-bottom:8px;padding-top:6px;border-top:2px solid var(--ink)}
+ h3{font-size:18pt}
+ .tagline{margin-bottom:2px}.why{margin-bottom:6px;font-size:9.5pt;max-width:none}
+ .route{display:none}
+ .pg{display:block}
+ .tl li{padding:1.5px 0;grid-template-columns:52px 1fr;gap:0 10px;break-inside:avoid}
+ .tl .t{font-size:12pt}.tl .p{font-size:10pt}.tl .w{font-size:9pt;margin:0}
+ .tl .sun{padding:2px 0;font-size:8pt}.tl .sun::before,.tl .sun::after{height:2px}
+ .side{position:static;break-inside:avoid}
+ .kv{display:inline-block;width:49%;vertical-align:top;padding:4px 0;font-size:9pt}
+ .card{border-width:1px;padding:8px;display:block;break-inside:avoid}
+ .card .big{font-size:10.5pt;max-width:none}
+ footer{background:#fff;color:#000;margin-top:10px;padding:8px 0 0;font-size:8.5pt;border-top:1px solid #000}
+ footer a{color:#000}
+ #choose{break-before:auto}
+}
+</style>
+</head>
+<body>
+<header class="bar">
+ <div class="wrap">
+  <ul class="facts" id="facts"></ul>
+  <nav class="nav" aria-label="Page sections">
+   <a href="#plans">Plans</a><a href="#meet">Meeting point</a><a href="#choose">How to choose</a>
+   <button class="pdf" type="button" onclick="window.print()">Save as PDF</button>
+  </nav>
+ </div>
+</header>
+
+<main>
+ <div class="wrap mark">
+  <h1 class="sr">Akihabara evening tour</h1>
+  <svg viewBox="0 0 1000 232" aria-hidden="true" focusable="false"><text x="0" y="226" font-size="300" textLength="1000" lengthAdjust="spacingAndGlyphs">AKIHABARA</text></svg>
+  <div class="kicker" id="kicker"></div>
+ </div>
+ <div class="photo"><img src="../img/chuo.jpg" alt="Akihabara main street with anime billboards" fetchpriority="high"></div>
+ <div class="redband"><div class="wrap"><p id="band"></p></div></div>
+
+ <section id="plans" class="wrap">
+  <div class="eyebrow">Three ways to spend the evening</div>
+  <h2 id="plansH"></h2>
+  <p class="lead">Pick a plan. Each one is about three hours on foot.</p>
+  <div class="tabs" role="tablist" aria-label="Choose a plan" id="tabs"></div>
+  <div id="panels"></div>
+ </section>
+
+ <section id="meet" class="wrap">
+  <div class="eyebrow">Where we start</div>
+  <h2><span class="nw">Meeting point</span></h2>
+  <div class="card">
+   <p class="big" id="meetText"></p>
+   <div><a class="btn" id="mapBtn" href="#" target="_blank" rel="noopener">Open in Google Maps</a></div>
+  </div>
+ </section>
+
+ <section id="choose" class="wrap">
+  <div class="eyebrow">Your move</div>
+  <h2><span class="nw">How to</span> <span class="nw">choose</span></h2>
+  <div class="card">
+   <p class="big" id="replyText"></p>
+   <div class="letters" aria-hidden="true"><span>A</span><span>B</span><span>C</span></div>
+  </div>
+ </section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <p id="note"></p>
+  <p id="credit"></p>
+ </div>
+</footer>
+
+<script src="../data.js"></script>
+<script>
+(function(){
+ var T=window.TOUR;
+ function $(id){return document.getElementById(id)}
+ function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e}
+ // keep the last two words together so a heading never ends on a lone word
+ function phrase(node,s){
+  var w=String(s).split(/\s+/);
+  if(w.length<3){var a=el('span','nw',s);node.appendChild(a);return node}
+  node.appendChild(document.createTextNode(w.slice(0,-2).join(' ')+' '));
+  node.appendChild(el('span','nw',w.slice(-2).join(' ')));
+  return node
+ }
+ function mins(t){var p=t.split(':');return +p[0]*60+ +p[1]}
+
+ var f=$('facts');
+ [['Guide Yuuki'],['Time '+T.time],['Start '+T.start,'opt']].forEach(function(x){var li=el('li',x[1]||'',x[0]);f.appendChild(li)});
+ var k=$('kicker');
+ k.appendChild(el('span','','Private evening tour for '+T.guest));
+ k.appendChild(el('span','',T.day));
+ [T.time.replace(' to ',' to '),'Sunset '+T.sunset,'On foot'].forEach(function(x){$('band').appendChild(el('span','nw',x))});
+ phrase($('plansH'),'Pick your evening');
+ $('meetText').textContent=T.meet;
+ $('mapBtn').href=T.map;
+ $('replyText').textContent=T.reply;
+ $('note').textContent=T.note;
+ $('credit').innerHTML=T.credit;
+
+ var tabs=$('tabs'),panels=$('panels'),sun=mins(T.sunset);
+ T.routes.forEach(function(r,i){
+  var b=el('button','tab');b.type='button';b.id='tab-'+r.id;b.setAttribute('role','tab');
+  b.setAttribute('aria-controls','p-'+r.id);b.setAttribute('aria-selected',i?'false':'true');b.tabIndex=i?-1:0;
+  b.appendChild(el('span','l',r.id));
+  phrase(b.appendChild(el('span','n')),r.name);
+  b.appendChild(el('span','g',r.tag));
+  tabs.appendChild(b);
+
+  var p=el('div','panel');p.id='p-'+r.id;p.setAttribute('role','tabpanel');p.setAttribute('aria-labelledby','tab-'+r.id);
+  if(i)p.hidden=true;
+  var h=el('h3');h.appendChild(el('span','pl','Plan '+r.id));phrase(h,r.name);
+  p.appendChild(h);
+  p.appendChild(el('p','tagline',r.tag));
+  p.appendChild(el('p','why',r.why));
+  var rt=el('ul','route');r.steps.forEach(function(s){rt.appendChild(el('li','',s.short))});p.appendChild(rt);
+
+  var g=el('div','pg'),ol=el('ol','tl'),done=false;
+  r.steps.forEach(function(s){
+   if(!done&&mins(s.t)>=sun){done=true;var d=el('li','sun');d.appendChild(el('span','','Sunset '+T.sunset));ol.appendChild(d)}
+   var li=el('li');li.appendChild(el('div','t',s.t));
+   var c=el('div');c.appendChild(el('div','p',s.place));c.appendChild(el('div','w',s.what));li.appendChild(c);ol.appendChild(li)
+  });
+  g.appendChild(ol);
+  var side=el('aside','side'),fig=el('figure'),im=el('img');
+  im.src='../'+r.img;im.alt=r.alt;im.loading='lazy';fig.appendChild(im);fig.appendChild(el('figcaption','',r.alt));side.appendChild(fig);
+  [['Best for',r.good],['Getting around',r.moves]].forEach(function(x){var kv=el('div','kv');kv.appendChild(el('b','',x[0]));kv.appendChild(el('span','',x[1]));side.appendChild(kv)});
+  g.appendChild(side);p.appendChild(g);panels.appendChild(p);
+ });
+
+ var all=[].slice.call(tabs.children);
+ function sel(b,focus){
+  all.forEach(function(x){var on=x===b;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;
+   document.getElementById(x.getAttribute('aria-controls')).hidden=!on});
+  if(focus)b.focus()
+ }
+ all.forEach(function(b,i){
+  b.addEventListener('click',function(){sel(b)});
+  b.addEventListener('keydown',function(e){
+   var n=null;
+   if(e.key==='ArrowRight')n=all[(i+1)%all.length];
+   else if(e.key==='ArrowLeft')n=all[(i+all.length-1)%all.length];
+   else if(e.key==='Home')n=all[0];else if(e.key==='End')n=all[all.length-1];
+   if(n){e.preventDefault();sel(n,true)}
+  })
+ });
+})();
+</script>
+</body>
+</html>

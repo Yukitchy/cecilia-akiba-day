@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Your evening in Akihabara</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fdf7ee; --card:#fff; --ink:#1d1a17; --sub:#6b645b; --red:#d7261e;
+  --line:#eadfce; --pill:#f4ead9; --sun:#fbe7c0; --sunink:#7a4c0a;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;color-scheme:light}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--serif);font-weight:600;text-wrap:balance;line-height:1.2}
+p{text-wrap:pretty}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+.app{max-width:420px;margin:0 auto;padding:0 16px calc(104px + env(safe-area-inset-bottom));min-height:100vh}
+header{padding:28px 0 6px}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--red)}
+h1{font-size:30px;margin:6px 0 8px}
+.lead{color:var(--sub)}
+
+section[role=tabpanel]{display:none;padding-top:14px}
+section[role=tabpanel].on{display:block;animation:in .3s ease both}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+.hero{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/3;background:#e8dfd0}
+.hero img{width:100%;height:100%;object-fit:cover}
+.hero .cap{position:absolute;inset:auto 0 0 0;padding:56px 18px 16px;color:#fff;background:linear-gradient(transparent,rgba(20,14,8,.82))}
+.hero .letter{display:inline-block;font:600 12px/1 var(--sans);letter-spacing:.12em;background:var(--red);padding:5px 9px;border-radius:99px;margin-bottom:8px}
+.hero h2{font-size:26px}
+.hero .tag{font-size:14px;opacity:.92;margin-top:2px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 4px}
+.chip{font-size:13px;font-weight:600;padding:5px 12px;border-radius:99px;background:var(--pill)}
+.why{margin:10px 2px 6px}
+
+.step{display:grid;grid-template-columns:58px 1fr;gap:12px;align-items:start;background:var(--card);border-radius:16px;padding:14px;margin:10px 0;box-shadow:0 1px 0 var(--line)}
+.time{font:600 13px/1 var(--sans);font-variant-numeric:tabular-nums;text-align:center;background:var(--ink);color:#fff;border-radius:99px;padding:7px 0}
+.place{font-weight:700;line-height:1.35}
+.what{color:var(--sub);font-size:14px;margin-top:2px}
+.sun{display:flex;align-items:center;gap:10px;margin:14px 0 4px;color:var(--sunink)}
+.sun::before,.sun::after{content:"";flex:1;height:1px;background:#ecd3a2}
+.sun span{font-size:12px;font-weight:700;letter-spacing:.04em;background:var(--sun);padding:5px 12px;border-radius:99px;display:inline-flex;gap:6px;align-items:center}
+.sun svg{width:14px;height:14px}
+
+.card{background:var(--card);border-radius:16px;padding:16px;margin:14px 0;box-shadow:0 1px 0 var(--line)}
+.card h3{font-size:17px;margin-bottom:6px}
+.card .k{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-top:12px}
+.card p+p{margin-top:8px}
+.card a{color:var(--red)}
+.card a.btn{color:#fff}
+.small{font-size:13px;color:var(--sub)}
+
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:52px;border:0;border-radius:14px;background:var(--red);color:#fff;font-weight:700;font-size:16px;text-decoration:none;cursor:pointer;margin-top:14px}
+.btn:hover{background:#bb1f18}
+.btn.ghost{background:var(--card);color:var(--ink);border:1.5px solid var(--line)}
+.btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.picks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.pick{min-height:92px;border-radius:18px;border:1.5px solid var(--line);background:var(--card);cursor:pointer;font:600 38px/1 var(--serif);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.pick small{font:500 12px/1.2 var(--sans);color:var(--sub)}
+.pick[aria-pressed=true]{background:var(--red);border-color:var(--red);color:#fff}
+.pick[aria-pressed=true] small{color:#ffe3df}
+#picked{min-height:1.6em;margin-top:12px;font-weight:600}
+
+nav{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:100%;max-width:420px;display:flex;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom);z-index:20}
+nav button{flex:1;min-width:0;background:none;border:0;cursor:pointer;padding:9px 0 10px;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:12px;font-weight:600;color:var(--sub)}
+nav svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+nav button[aria-selected=true]{color:var(--red)}
+
+@media(min-width:900px){
+  body{background:var(--bg)}
+  .app{background:var(--bg);border-left:1px solid var(--line);border-right:1px solid var(--line);box-shadow:0 0 60px rgba(60,40,10,.06)}
+  nav{border-left:1px solid var(--line);border-right:1px solid var(--line)}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+
+@media print{
+  @page{size:A4;margin:10mm}
+  body{font-size:10.5pt;line-height:1.35;background:#fff}
+  nav,.btn,.picks,#picked,.noprint{display:none!important}
+  .app{max-width:none;padding:0;min-height:0;border:0;box-shadow:none}
+  header{padding:0 0 4px} h1{font-size:20pt;margin:2px 0}
+  section[role=tabpanel]{display:block!important;padding-top:6px;animation:none!important;opacity:1!important;transform:none!important}
+  #plans{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;align-items:start}
+  .plan{break-inside:avoid}
+  .hero{aspect-ratio:auto;height:80px;border-radius:10px}
+  .hero .cap{padding:20px 8px 5px}
+  .hero h2{font-size:11pt} .hero .tag{font-size:8pt} .hero .letter{font-size:8pt;margin-bottom:3px;padding:3px 7px}
+  .chips{margin:6px 0 2px} .chip{font-size:8pt;padding:2px 8px}
+  .why{font-size:8.5pt;margin:4px 0}
+  .step{grid-template-columns:40px 1fr;gap:6px;padding:5px 6px;margin:4px 0;border:1px solid var(--line);box-shadow:none;border-radius:8px;break-inside:avoid}
+  .time{font-size:8pt;padding:4px 0;background:#444}
+  .place{font-size:9pt} .what{font-size:8pt;line-height:1.3}
+  .sun{margin:6px 0 2px} .sun span{font-size:8pt;padding:2px 8px}
+  .card{box-shadow:none;border:1px solid var(--line);padding:6px 8px;margin:6px 0;break-inside:avoid;font-size:8.5pt}
+  .card h3{font-size:10pt}
+  .tail{break-before:auto}
+  .tail .card{margin:6px 0}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="kicker">AKIHABARA &middot; NOV 5 OR 6</div>
+    <h1>Your evening in Akihabara</h1>
+    <p class="lead" id="lead"></p>
+  </header>
+
+  <main id="main">
+    <div id="plans"></div>
+    <div class="tail" id="tail"></div>
+  </main>
+
+  <nav role="tablist" aria-label="Sections" id="tabs"></nav>
+</div>
+
+<script src="../data.js"></script>
+<script>
+(function(){
+  var T = window.TOUR, R = T.routes;
+  var $ = function(s){return document.querySelector(s)};
+  function el(tag, cls, txt){var e=document.createElement(tag); if(cls) e.className=cls; if(txt!=null) e.textContent=txt; return e}
+  function svg(path, extra){return '<svg viewBox="0 0 24 24" aria-hidden="true">'+path+'</svg>'}
+
+  var ICON = {
+    A: '<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
+    B: '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.600-7 10-7 10z"/>',
+    C: '<rect x="3" y="7" width="18" height="10" rx="4"/><path d="M8 10v4M6 12h4"/><circle cx="15.500" cy="11" r=".6"/><circle cx="17.500" cy="13" r=".6"/>',
+    meet: '<path d="M12 21s-6.500-5.600-6.500-11a6.500 6.500 0 0 1 13 0c0 5.400-6.500 11-6.500 11z"/><circle cx="12" cy="10" r="2.300"/>',
+    choose: '<circle cx="12" cy="12" r="9"/><path d="M8 12.500l2.800 2.800L16 9.500"/>'
+  };
+  var SUNSVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 18h18M7 18a5 5 0 0 1 10 0M12 5v3M4.500 11l2 1.500M19.500 11l-2 1.500"/></svg>';
+
+  $('#lead').textContent = 'Hi ' + T.guest + ', three ways to spend ' + T.time.replace(' to ', ' to ') + '. Pick a plan, then tell me.';
+
+  // ---- plans
+  var plans = $('#plans');
+  R.forEach(function(r){
+    var s = el('section','plan'); s.id = 'p-'+r.id; s.setAttribute('role','tabpanel'); s.dataset.tab = r.id;
+
+    var hero = el('div','hero');
+    var im = el('img'); im.src = '../'+r.img; im.alt = r.alt; im.width=800; im.height=600;
+    if(r.id!=='A') im.loading='lazy';
+    var cap = el('div','cap');
+    cap.appendChild(el('span','letter','PLAN '+r.id));
+    cap.appendChild(el('h2',null,r.name));
+    cap.appendChild(el('div','tag',r.tag));
+    hero.appendChild(im); hero.appendChild(cap); s.appendChild(hero);
+
+    var chips = el('div','chips'); chips.appendChild(el('span','chip','3 hours')); chips.appendChild(el('span','chip','On foot'));
+    s.appendChild(chips);
+    s.appendChild(el('p','why',r.why));
+
+    var placed = false;
+    r.steps.forEach(function(st, i){
+      if(!placed && st.t >= T.sunset && i>0){
+        placed = true;
+        var d = el('div','sun'); var sp = el('span'); sp.innerHTML = SUNSVG; sp.appendChild(document.createTextNode('Sunset '+T.sunset)); d.appendChild(sp); s.appendChild(d);
+      }
+      var c = el('div','step');
+      c.appendChild(el('div','time',st.t));
+      var b = el('div'); b.appendChild(el('div','place',st.place)); b.appendChild(el('p','what',st.what)); c.appendChild(b);
+      s.appendChild(c);
+    });
+
+    var g = el('div','card');
+    g.appendChild(el('h3',null,'Best for'));
+    g.appendChild(el('p',null,r.good));
+    g.appendChild(el('div','k','Getting around'));
+    g.appendChild(el('p',null,r.moves));
+    s.appendChild(g);
+    plans.appendChild(s);
+  });
+
+  // ---- meet + choose
+  var tail = $('#tail');
+  var meet = el('section'); meet.id='p-meet'; meet.setAttribute('role','tabpanel'); meet.dataset.tab='meet';
+  var m1 = el('div','card');
+  m1.appendChild(el('h3',null,'Where we meet'));
+  m1.appendChild(el('p',null,T.meet));
+  m1.appendChild(el('div','k','When'));
+  m1.appendChild(el('p',null,T.day+', '+T.time+'. Sunset is at '+T.sunset+'.'));
+  var a = el('a','btn'); a.href=T.map; a.target='_blank'; a.rel='noopener';
+  a.innerHTML = svg(ICON.meet); a.appendChild(document.createTextNode('Open the meeting point in Maps'));
+  m1.appendChild(a);
+  meet.appendChild(m1);
+  var m2 = el('div','card'); m2.appendChild(el('h3',null,'Good to know')); m2.appendChild(el('p',null,T.note));
+  var cr = el('p','small'); cr.innerHTML = T.credit; m2.appendChild(cr);
+  meet.appendChild(m2);
+  tail.appendChild(meet);
+
+  var ch = el('section'); ch.id='p-choose'; ch.setAttribute('role','tabpanel'); ch.dataset.tab='choose';
+  var c1 = el('div','card');
+  c1.appendChild(el('h3',null,'Choose your plan'));
+  c1.appendChild(el('p',null,T.reply));
+  var picks = el('div','picks'); picks.setAttribute('role','group'); picks.setAttribute('aria-label','Plan choice');
+  R.forEach(function(r){
+    var b = el('button','pick',r.id); b.type='button'; b.setAttribute('aria-pressed','false');
+    b.appendChild(el('small',null,r.name));
+    b.onclick = function(){
+      picks.querySelectorAll('.pick').forEach(function(x){x.setAttribute('aria-pressed', x===b?'true':'false')});
+      $('#picked').textContent = 'Your pick: '+r.id+'. Now send me that letter.';
+    };
+    picks.appendChild(b);
+  });
+  c1.appendChild(picks);
+  var pk = el('p',null,''); pk.id='picked'; pk.setAttribute('aria-live','polite'); c1.appendChild(pk);
+  var pdf = el('button','btn ghost'); pdf.type='button'; pdf.innerHTML = svg('<path d="M12 4v11M7.500 10.500L12 15l4.500-4.500M5 20h14"/>'); pdf.appendChild(document.createTextNode('Save as PDF')); pdf.onclick=function(){window.print()};
+  c1.appendChild(pdf);
+  ch.appendChild(c1);
+  tail.appendChild(ch);
+
+  // ---- tab bar
+  var ids = ['A','B','C','meet','choose'], labels = {A:'A',B:'B',C:'C',meet:'Meet',choose:'Choose'};
+  var bar = $('#tabs');
+  ids.forEach(function(id){
+    var b = el('button'); b.type='button'; b.setAttribute('role','tab'); b.dataset.tab=id; b.id='t-'+id;
+    b.innerHTML = svg(ICON[id]) + '<span>'+labels[id]+'</span>';
+    b.onclick = function(){ if(location.hash.replace('#','')===id) show(id); else location.hash = id; };
+    bar.appendChild(b);
+  });
+  bar.addEventListener('keydown', function(e){
+    var i = ids.indexOf(document.activeElement && document.activeElement.dataset.tab);
+    if(i<0) return;
+    if(e.key==='ArrowRight'||e.key==='ArrowLeft'){ var n=(i+(e.key==='ArrowRight'?1:ids.length-1))%ids.length; $('#t-'+ids[n]).focus(); e.preventDefault(); }
+  });
+
+  function show(id){
+    document.querySelectorAll('[role=tabpanel]').forEach(function(p){p.classList.toggle('on', p.dataset.tab===id)});
+    document.querySelectorAll('nav button').forEach(function(b){
+      var on = b.dataset.tab===id; b.setAttribute('aria-selected', on); b.tabIndex = 0;
+    });
+    window.scrollTo(0,0);
+  }
+  function fromHash(){
+    var h = location.hash.replace('#','').toLowerCase();
+    var id = ids.filter(function(x){return x.toLowerCase()===h})[0] || 'A';
+    show(id);
+  }
+  window.addEventListener('hashchange', fromHash);
+  fromHash();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Akihabara After Dark - Mission Brief for Cecilia</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@500;600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#141a33;--violet:#2b1654;--panel:#0d1126;--line:#3b4381;
+  --ink:#eef0ff;--sub:#b4bbe6;
+  --pink:#ff4fa3;--cyan:#39d0ff;--red:#d7261e;
+  --disp:"Barlow Condensed","Arial Narrow",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --sans:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{color-scheme:dark}
+body{margin:0;color:var(--ink);font:400 16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;
+  background:var(--navy);
+  background:
+    radial-gradient(1px 1px at 12% 8%,#fff8 50%,transparent 51%),
+    radial-gradient(1px 1px at 78% 4%,#fff8 50%,transparent 51%),
+    radial-gradient(1px 1px at 55% 13%,#fff6 50%,transparent 51%),
+    radial-gradient(1px 1px at 91% 19%,#fff6 50%,transparent 51%),
+    radial-gradient(1px 1px at 30% 20%,#fff6 50%,transparent 51%),
+    radial-gradient(ellipse 80% 50% at 50% 100%,#ff4fa326,transparent 70%),
+    linear-gradient(180deg,#141a33 0%,#1c1745 45%,#2b1654 100%);
+  background-attachment:scroll;min-height:100vh}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance}
+p,li{text-wrap:pretty}
+a{color:var(--cyan);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+img{display:block;max-width:100%}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.mono{font-family:var(--mono)}
+.nw{white-space:nowrap}
+
+/* hero */
+.hero{padding:44px 0 36px;border-bottom:2px solid var(--red)}
+.kicker{font:600 12px/1.6 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px}
+h1{font:700 clamp(60px,15.5vw,156px)/.86 var(--disp);text-transform:uppercase;letter-spacing:-.005em;
+  text-shadow:0 0 28px #ff4fa366}
+h1 .hl{color:var(--pink)}
+.coords{font:500 13px/1.6 var(--mono);color:var(--sub);margin-top:18px;letter-spacing:.04em}
+.coords b{color:var(--ink);font-weight:600}
+.cd{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+.cd .u{min-width:84px;padding:10px 14px 8px;border:1px solid var(--line);border-top:3px solid var(--pink);background:#0d1126cc;text-align:center}
+.cd .n{display:block;font:700 44px/1 var(--disp);font-variant-numeric:tabular-nums;color:var(--ink)}
+.cd .l{display:block;font:600 11px/1.6 var(--mono);letter-spacing:.16em;color:var(--sub);margin-top:4px}
+.cd-note{font:500 12px/1.6 var(--mono);color:var(--sub);margin-top:10px;letter-spacing:.04em}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font:500 13px/1.5 var(--mono);color:var(--sub)}
+.facts b{color:var(--cyan);font-weight:600;letter-spacing:.1em;margin-right:6px}
+
+/* sections */
+.sec-h{font:600 12px/1.6 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--pink);margin:44px 0 14px}
+.plan{background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--red);margin-bottom:22px;box-shadow:0 0 0 1px #0006,0 0 36px #39d0ff12}
+.plan-h{display:flex;align-items:center;gap:16px;padding:18px 18px 14px;border-bottom:1px dashed var(--line)}
+.letter{font:700 clamp(72px,18vw,116px)/.8 var(--disp);color:var(--pink);text-shadow:0 0 22px #ff4fa388;flex:none;padding-right:4px}
+.codename .k{font:600 11px/1.6 var(--mono);letter-spacing:.18em;color:var(--cyan);text-transform:uppercase}
+.codename h3{font:700 clamp(32px,7vw,52px)/.98 var(--disp);text-transform:uppercase;margin-top:2px}
+.codename .tag{font:500 13px/1.5 var(--mono);color:var(--sub);margin-top:6px}
+.plan-b{display:grid;gap:22px;padding:18px}
+.obj .k,.best .k,.log-h{font:600 11px/1.6 var(--mono);letter-spacing:.18em;color:var(--cyan);text-transform:uppercase;margin-bottom:6px}
+.obj p{font-size:17px}
+.log-h{margin-top:20px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.log{list-style:none;margin:0;padding:0}
+.log li{display:grid;grid-template-columns:62px 1fr;column-gap:12px;padding:10px 0;border-bottom:1px solid #2a3166}
+.log li:last-child{border-bottom:0}
+.log .t{font:600 15px/1.5 var(--mono);color:var(--pink)}
+.log .p{font-weight:600;line-height:1.4}
+.log .w{grid-column:2;color:var(--sub);font-size:15px;line-height:1.55;margin-top:2px}
+.side figure{margin:0}
+.side img{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line)}
+.side figcaption{font:500 12px/1.5 var(--mono);color:var(--sub);margin-top:6px}
+.best{margin-top:16px;padding:12px 14px;border:1px solid var(--line);border-left:3px solid var(--cyan);background:#141a3399}
+.best p+.k{margin-top:12px}
+.best p{font-size:15px}
+
+/* rendezvous / confirm */
+.two{display:grid;gap:22px}
+.card{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--cyan);padding:20px 18px}
+.card.go{border-top-color:var(--pink)}
+.card h2{font:700 clamp(30px,6vw,40px)/1 var(--disp);text-transform:uppercase;margin-bottom:10px}
+.card p{margin-bottom:14px}
+.btn{display:inline-block;font:600 14px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;
+  padding:14px 18px;min-height:44px;border:2px solid var(--cyan);background:var(--cyan);color:#0b1024;cursor:pointer}
+.btn:hover{background:#7fe0ff;border-color:#7fe0ff}
+.btn.alt{background:transparent;color:var(--pink);border-color:var(--pink)}
+.btn.alt:hover{background:var(--pink);color:#0b1024}
+.reply{font-size:18px;font-weight:500}
+.note{font:500 13px/1.6 var(--mono);color:var(--sub);margin-top:18px;max-width:70ch}
+.actions{margin-top:26px}
+footer{margin:48px 0 40px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--sub);line-height:1.6}
+footer .by{font-family:var(--mono);letter-spacing:.08em;margin-bottom:6px}
+
+@media (min-width:760px){
+  .wrap{padding:0 24px}
+  .hero{padding:64px 0 48px}
+  .plan-b{grid-template-columns:1.35fr 1fr;gap:30px;padding:22px 24px}
+  .plan-h{padding:22px 24px 16px}
+  .log li{grid-template-columns:70px minmax(150px,.9fr) 1.5fr;column-gap:16px;align-items:baseline}
+  .log .w{grid-column:auto;margin-top:0}
+  .two{grid-template-columns:1fr 1fr}
+}
+@media (min-width:760px) and (max-width:979px){
+  .log li{grid-template-columns:62px 1fr;}
+  .log .w{grid-column:2;margin-top:2px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .letter{animation:glow 4s ease-in-out infinite alternate}
+  @keyframes glow{from{text-shadow:0 0 14px #ff4fa366}to{text-shadow:0 0 30px #ff4fa3aa}}
+  html{scroll-behavior:smooth}
+}
+
+/* print: white paper */
+@page{size:A4;margin:9mm}
+@media print{
+  html{color-scheme:light}
+  body{background:#fff !important;color:#000;font-size:9.5pt;line-height:1.4}
+  .wrap{max-width:none;padding:0}
+  a{color:#000}
+  .hero{padding:0 0 6pt;border-bottom:1.5pt solid #000}
+  .kicker,.coords,.cd-note,.facts,.facts b,.codename .k,.obj .k,.best .k,.log-h,.codename .tag,.side figcaption,.note,footer,.log .w,.cd .l{color:#000}
+  h1{font-size:30pt;text-shadow:none;color:#000}
+  h1 .hl{color:#000}
+  .coords{margin-top:6pt}.facts{margin-top:6pt}
+  .cd,.cd-note,.actions,.side figure,.btn{display:none !important}
+  .sec-h{color:#000;margin:12pt 0 6pt}
+  .plan,.card,.best{background:#fff;border-color:#000;box-shadow:none;border-left-width:3pt;margin-bottom:8pt;break-inside:avoid}
+  .plan{break-inside:auto}.plan-h,.log li,.best{break-inside:avoid}.plan-h{break-after:avoid}
+  .coords b,.cd .n,.log .p,.log .t{color:#000}
+  .plan-h{padding:4pt 8pt;gap:10pt;border-bottom:1px solid #000}
+  .letter{font-size:36pt;color:#000;text-shadow:none;animation:none}
+  .codename h3{font-size:18pt}
+  .plan-b{display:block;padding:6pt 8pt}
+  .obj p{font-size:9pt}
+  .log-h{margin-top:4pt;border-color:#000}
+  .log li{padding:1pt 0;border-color:#999;grid-template-columns:40pt 1fr;column-gap:8pt}
+  .log .t{color:#000;font-size:9pt}.log .p,.log .w{font-size:8.5pt;line-height:1.25}
+  .best{margin-top:6pt;padding:4pt 8pt}.best p{font-size:9pt}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:6pt}
+  .card{padding:6pt 8pt;border-top-width:3pt}
+  .card h2{font-size:15pt;margin-bottom:3pt}.card p{margin-bottom:3pt;font-size:9.5pt}
+  .reply{font-size:10pt}
+  .note{margin-top:3pt;font-size:7.5pt;line-height:1.3;max-width:none}
+  .plan-b{padding:4pt 8pt}.best{margin-top:3pt;padding:2pt 6pt}.best p{font-size:8.5pt;line-height:1.25}.best .k{margin-bottom:0}.best p+.k{margin-top:3pt}
+  .sec-h{margin:8pt 0 4pt}
+  .plan,.card{margin-bottom:5pt}
+  footer{margin:4pt 0 0;padding-top:4pt;border-color:#000;font-size:8pt}
+}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <p class="kicker" id="kicker"></p>
+  <h1>Akihabara <span class="hl nw">After Dark</span></h1>
+  <p class="coords" id="coords"></p>
+  <div class="cd" id="cd" role="timer" aria-live="off" aria-label="Time until the tour starts">
+    <div class="u"><span class="n" id="cd-d">--</span><span class="l">DAYS</span></div>
+    <div class="u"><span class="n" id="cd-h">--</span><span class="l">HOURS</span></div>
+    <div class="u"><span class="n" id="cd-m">--</span><span class="l">MINUTES</span></div>
+  </div>
+  <p class="cd-note" id="cd-note"></p>
+  <div class="facts" id="facts"></div>
+</div></header>
+
+<main class="wrap">
+  <h2 class="sec-h">Choose your mission</h2>
+  <div id="plans"></div>
+  <div class="two">
+    <section class="card" aria-labelledby="rv">
+      <h2 id="rv">Rendezvous</h2>
+      <p id="meet"></p>
+      <a class="btn" id="map" target="_blank" rel="noopener">Open map</a>
+    </section>
+    <section class="card go" aria-labelledby="cf">
+      <h2 id="cf">Confirm your mission</h2>
+      <p class="reply" id="reply"></p>
+    </section>
+  </div>
+  <p class="note" id="note"></p>
+  <div class="actions"><button class="btn alt" type="button" onclick="window.print()">Save as PDF</button></div>
+</main>
+<footer><div class="wrap">
+  <p class="by">PREPARED BY YUUKI</p>
+  <p id="credit"></p>
+</div></footer>
+
+<script src="../data.js"></script>
+<script>
+(function(){
+  var T=window.TOUR;
+  var $=function(i){return document.getElementById(i)};
+  var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+  $('kicker').textContent='MISSION BRIEF FOR '+T.guest.toUpperCase()+' · PREPARED BY YUUKI';
+  $('coords').innerHTML='35.6984 N, 139.7731 E · <b>'+esc(T.start)+'</b>';
+  $('facts').innerHTML=
+    '<span><b>DATE</b>'+esc(T.day)+'</span>'+
+    '<span><b>TIME</b>'+esc(T.time)+'</span>'+
+    '<span><b>SUNSET</b>'+esc(T.sunset)+'</span>';
+  $('plans').innerHTML=T.routes.map(function(r){
+    var steps=r.steps.map(function(s){
+      return '<li><span class="t">'+esc(s.t)+'</span><span class="p">'+esc(s.place)+'</span><span class="w">'+esc(s.what)+'</span></li>';
+    }).join('');
+    return '<article class="plan" aria-labelledby="p'+esc(r.id)+'">'+
+      '<div class="plan-h"><div class="letter" aria-hidden="true">'+esc(r.id)+'</div>'+
+      '<div class="codename"><div class="k">Mission '+esc(r.id)+' · Codename</div><h3 id="p'+esc(r.id)+'">'+esc(r.name)+'</h3><p class="tag">'+esc(r.tag)+'</p></div></div>'+
+      '<div class="plan-b"><div class="main">'+
+        '<div class="obj"><div class="k">Objective</div><p>'+esc(r.why)+'</p></div>'+
+        '<div class="log-h">Flight log</div><ol class="log">'+steps+'</ol></div>'+
+      '<div class="side"><figure><img src="../'+esc(r.img)+'" alt="'+esc(r.alt)+'" loading="lazy"><figcaption>'+esc(r.alt)+'</figcaption></figure>'+
+        '<div class="best"><div class="k">Best for</div><p>'+esc(r.good)+'</p><div class="k">On the move</div><p>'+esc(r.moves)+'</p></div></div></div>'+
+    '</article>';
+  }).join('');
+  $('meet').textContent=T.meet;
+  $('map').href=T.map;
+  $('reply').textContent=T.reply;
+  $('note').textContent=T.note;
+  $('credit').innerHTML=T.credit;
+  var target=new Date(T.startISO).getTime();
+  function tick(){
+    var ms=target-Date.now();
+    if(ms<=0){['d','h','m'].forEach(function(k){$('cd-'+k).textContent='00'});$('cd-note').textContent='Mission window is open.';return}
+    var m=Math.floor(ms/60000);
+    $('cd-d').textContent=Math.floor(m/1440);
+    $('cd-h').textContent=String(Math.floor(m%1440/60)).padStart(2,'0');
+    $('cd-m').textContent=String(m%60).padStart(2,'0');
+    $('cd-note').textContent='T-MINUS TO '+T.time.split(' ')[0]+' · '+T.day.split(' or ')[0].toUpperCase()+' LAUNCH OPTION';
+  }
+  tick();setInterval(tick,30000);
+})();
+</script>
+</body>
+</html>

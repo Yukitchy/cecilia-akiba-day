@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Akihabara Evening</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#fbf8f1;--ink:#111;--red:#d7261e;--soft:#555;--rule:#111;--hair:rgba(17,17,17,.35)}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:16px;line-height:1.5;-webkit-text-size-adjust:100%}
+.sheet{max-width:1240px;margin:0 auto;padding:24px 16px 48px}
+h1,h2,h3,.deck{text-wrap:balance}
+p{text-wrap:pretty;margin:0}
+.rule3{border:0;border-top:3px double var(--ink);margin:0}
+.rule1{border:0;border-top:1px solid var(--ink);margin:0}
+.masthead{font-family:"Playfair Display",Georgia,serif;font-weight:900;text-align:center;margin:10px 0;line-height:1;font-size:clamp(34px,8.4vw,108px);letter-spacing:-.01em}
+.dateline{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 0;font-variant:small-caps;letter-spacing:.06em;font-size:15px;padding:7px 0;border-top:1px solid var(--ink);border-bottom:3px double var(--ink);margin-top:8px}
+.dateline span{padding:0 12px;white-space:nowrap}
+.dateline span+span{border-left:1px solid var(--hair)}
+.headline{font-family:"Playfair Display",Georgia,serif;font-weight:700;text-align:center;font-size:clamp(26px,4.2vw,52px);line-height:1.1;margin:22px auto 20px;max-width:900px}
+.cols{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.plan{padding:20px 0;border-top:1px solid var(--hair)}
+.plan:first-child{border-top:0}
+.kicker{font-variant:small-caps;letter-spacing:.14em;color:var(--red);font-weight:600;font-size:15px;margin:0 0 4px}
+.plan h2{font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:30px;line-height:1.1;margin:0 0 6px}
+.deck{font-style:italic;color:var(--soft);margin:0 0 12px;font-size:17px}
+.plan figure{margin:0 0 12px}
+.plan img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;filter:grayscale(.15) contrast(1.03);border:1px solid var(--ink)}
+.plan figcaption{font-size:13px;font-style:italic;color:var(--soft);margin-top:4px;border-bottom:1px solid var(--hair);padding-bottom:6px}
+.lead::first-letter{font-family:"Playfair Display",Georgia,serif;font-weight:900;float:left;font-size:4.1em;line-height:.8;padding:6px 8px 0 0}
+.lead{margin-bottom:14px}
+.tt{width:100%;border-collapse:collapse;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);margin-bottom:14px;font-size:14.5px}
+.tt caption{font-variant:small-caps;letter-spacing:.12em;text-align:left;font-weight:600;padding:5px 0 3px;font-size:14px}
+.tt th,.tt td{padding:4px 0;border-top:1px solid var(--hair);text-align:left;vertical-align:top;line-height:1.35}
+.tt tr:first-of-type th,.tt tr:first-of-type td{border-top:0}
+.tt th{width:3.4em;font-weight:600;font-variant-numeric:tabular-nums;padding-right:10px}
+.moves{font-size:13.5px;color:var(--soft);margin-bottom:12px}
+.pull{margin:0;padding:10px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:19px;line-height:1.3;text-align:center;text-wrap:balance}
+.pull b{display:block;font-family:"Source Serif 4",serif;font-style:normal;font-weight:600;font-variant:small-caps;letter-spacing:.14em;font-size:13px;color:var(--ink);margin-bottom:3px}
+.notices{margin:22px 0 0;border:2px solid var(--ink);padding:0;display:grid;grid-template-columns:1fr}
+.notices>div{padding:14px 16px}
+.notices>div+div{border-top:1px solid var(--ink)}
+.notices h3{font-variant:small-caps;letter-spacing:.14em;font-size:16px;margin:0 0 6px;font-weight:600;font-family:"Source Serif 4",serif}
+.notices a{color:var(--ink);text-underline-offset:3px}
+.btn{font:inherit;font-variant:small-caps;letter-spacing:.1em;background:var(--ink);color:var(--paper);border:0;padding:9px 18px;cursor:pointer;margin-top:10px}
+.btn:hover{background:#333}
+.note{font-size:13.5px;font-style:italic;color:var(--soft);margin-top:14px;text-align:center}
+footer{margin-top:14px;padding-top:8px;border-top:1px solid var(--ink);font-size:12.5px;color:var(--soft);text-align:center}
+footer a{color:var(--soft)}
+@media (min-width:900px){
+ .sheet{padding:28px 32px 56px}
+ .cols{grid-template-columns:repeat(3,1fr)}
+ .plan{padding:20px 22px;border-top:0}
+ .plan:first-child{padding-left:0}
+ .plan:last-child{padding-right:0}
+ .plan+.plan{border-left:1px solid var(--ink)}
+ .notices{grid-template-columns:1fr 1fr auto;align-items:center}
+ .notices>div+div{border-top:0;border-left:1px solid var(--ink)}
+}
+@media (max-width:420px){.dateline{flex-direction:column;align-items:center}.dateline span+span{border-left:0}.plan h2{font-size:27px}}
+@page{size:A4 landscape;margin:6mm}
+@media print{
+ html,body{background:var(--paper);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ body{font-size:8.3pt;line-height:1.25}
+ .sheet{max-width:none;padding:0}
+ .masthead{font-size:36pt;margin:0}
+ .dateline{font-size:8.5pt;padding:2px 0;margin-top:2mm}
+ .headline{font-size:15pt;margin:2mm auto}
+ .cols{grid-template-columns:repeat(3,1fr)}
+ .plan{padding:2.5mm 4mm;border-top:0}
+ .plan:first-child{padding-left:0}.plan:last-child{padding-right:0}
+ .plan+.plan{border-left:1px solid var(--ink)}
+ .kicker{font-size:8.5pt;margin-bottom:1px}
+ .plan h2{font-size:15pt;margin-bottom:2px}
+ .deck{font-size:9pt;margin-bottom:4px}
+ .plan figure{margin-bottom:4px}
+ .plan img{aspect-ratio:16/5}
+ .plan figcaption{font-size:7pt;padding-bottom:2px;margin-top:1px}
+ .lead{margin-bottom:4px}
+ .lead::first-letter{font-size:3.6em;padding:3px 4px 0 0}
+ .tt{font-size:7.6pt;margin-bottom:4px}
+ .tt caption{font-size:7.5pt;padding:2px 0 1px}
+ .tt th,.tt td{padding:1px 0}
+ .moves{font-size:7.4pt;margin-bottom:4px}
+ .pull{font-size:10pt;padding:3px 0}
+ .pull b{font-size:7.5pt;margin-bottom:1px}
+ .notices{margin-top:2mm;grid-template-columns:1fr 1fr}
+ .notices>div{padding:2mm 3mm}
+ .notices h3{font-size:8.5pt;margin-bottom:2px}
+ .btn{display:none}
+ .btn-cell{display:none}
+ .note{font-size:7pt;margin-top:1mm}
+ footer{font-size:6.5pt;margin-top:1mm;padding-top:1px}
+ .plan,.notices{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="sheet">
+ <hr class="rule3">
+ <h1 class="masthead">The Akihabara Evening</h1>
+ <div class="dateline" id="dateline"></div>
+ <h2 class="headline">Three ways to spend one evening in Electric Town</h2>
+ <main class="cols" id="cols"></main>
+ <section class="notices" aria-label="Notices">
+  <div><h3>Notice: Meeting point</h3><p id="meet"></p><p style="margin-top:6px"><a id="map" href="#">Open the meeting point on the map</a></p></div>
+  <div><h3>Notice: How to reply</h3><p id="reply"></p></div>
+  <div class="btn-cell"><button class="btn" type="button" onclick="window.print()">Save as PDF</button></div>
+ </section>
+ <p class="note" id="note"></p>
+ <footer id="credit"></footer>
+</div>
+<script src="../data.js"></script>
+<script>
+(function(){
+ var T=window.TOUR;
+ function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+ // keep the last two words of a heading together (no single-word last line)
+ function nb(s){return esc(s).replace(/ (\S+)$/,"&nbsp;$1")}
+ document.getElementById("dateline").innerHTML=
+  ["Special edition for "+T.guest,T.day,T.time,"Sunset "+T.sunset].map(function(x){return"<span>"+esc(x)+"</span>"}).join("");
+ document.getElementById("cols").innerHTML=T.routes.map(function(r){
+  var rows=r.steps.map(function(s){return"<tr><th scope=\"row\">"+esc(s.t)+"</th><td>"+esc(s.place)+"</td></tr>"}).join("");
+  return "<article class=\"plan\">"+
+   "<p class=\"kicker\">Plan "+esc(r.id)+"</p>"+
+   "<h2>"+nb(r.name)+"</h2>"+
+   "<p class=\"deck\">"+nb(r.tag)+"</p>"+
+   "<figure><img src=\"../"+esc(r.img)+"\" alt=\""+esc(r.alt)+"\"><figcaption>"+esc(r.alt)+"</figcaption></figure>"+
+   "<p class=\"lead\">"+esc(r.why)+"</p>"+
+   "<table class=\"tt\"><caption>Timetable</caption>"+rows+"</table>"+
+   "<p class=\"moves\">"+esc(r.moves)+"</p>"+
+   "<blockquote class=\"pull\"><b>Best for</b>"+esc(r.good)+"</blockquote>"+
+  "</article>";
+ }).join("");
+ document.getElementById("meet").textContent=T.meet;
+ document.getElementById("map").href=T.map;
+ document.getElementById("reply").textContent=T.reply;
+ document.getElementById("note").textContent=T.note;
+ document.getElementById("credit").innerHTML=T.credit;
+})();
+</script>
+</body>
+</html>
